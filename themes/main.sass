@@ -1,0 +1,510 @@
+@font-face
+  font-family: 'Ferry'
+  src: url('../assets/fonts/Ferry.eot')
+  src: local('☺'), 
+  url('../assets/fonts/Ferry.woff') format('woff'), 
+  url('../assets/fonts/Ferry.ttf') format('truetype'), 
+  url('../assets/fonts/Ferry.svg') format('svg')
+  font-weight: normal
+  font-style: normal
+  font-display: fallback
+
+.container 
+  max-width: 1440px
+  margin: 0 auto
+  padding: 0 56px
+
+*
+  box-sizing: border-box
+
+a
+  text-decoration: none
+  color: #303030
+  display: block
+  font-size: 1.2rem
+
+h1
+  margin: 0
+
+html 
+  font-size: 62.5%
+  
+body
+  font-family: 'Ferry'
+  color: #303030
+  margin: 0
+
+ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+  
+button
+  outline: none
+  
+h1
+  
+h2
+  color: #202528
+  font-size: 2.4rem
+  margin-bottom: 38px
+
+h3
+  font-size: 1.8rem
+  font-weight: bold
+  font-family: 'Open Sans'
+  color: #323A3F
+
+h4
+  font-size: 1.4rem
+  font-weight: bold
+  font-family: 'Open Sans'
+  color: #323A3F
+
+blockquote
+  font-size: 1.8rem
+  color: #323A3F
+  font-family: 'Open Sans'
+  margin: 0
+  padding: 0 0 0 36px
+  position: relative
+  margin-bottom: 36px
+  &:before
+    content: ""
+    position: absolute
+    top: 6px
+    left: 0
+    background-image: url('../assets/blockquote-icon.svg')
+    background-size: cover
+    background-repeat: no-repeat
+    width: 25px
+    height: 20px
+
+p
+  font-weight: normal
+  font-family: Open Sans
+  font-size: 1.4rem
+  margin-bottom: 20px
+
+ol
+  counter-reset: myCounter
+  padding: 0
+  li
+    list-style: none
+    position: relative
+    padding-left: 100px
+    margin-bottom: 80px
+    &:before 
+      counter-increment: myCounter
+      content: "0" counter(myCounter)
+      position: absolute
+      top: -11px
+      left: 0
+      font-size: 4.8rem
+      line-height: 1
+      text-align: right
+      width: 75px
+    &:nth-child(1)
+      &:after
+        content: ""
+        position: absolute
+        top: 0
+        background-image: url('../assets/blockquote-icon.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        width: 25px
+        height: 20px
+        left: -3px
+
+    p
+      margin-top: 0
+      margin-bottom: 10px
+
+table
+  font-family: "Open Sans"
+  font-size: 1.4rem
+  border-top: 3px solid #475057
+  border-bottom: 3px solid #475057
+  tr
+    &:nth-child(odd)
+      background: #F8F9FA;
+    td
+      padding: 24px 
+      &:nth-child(1)
+        font-weight: bold
+
+textarea
+  font-family: "Open sans"
+
+.btn
+  min-width: 165px
+  text-align: center
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  height: 48px
+  border: 0
+  color: #fff
+  font-family: "Open Sans"
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 1.1rem
+  letter-spacing: 0.15em
+  cursor: pointer
+  overflow: hidden
+  transition-timing-function:  cubic-bezier(0.47, 0, 0.745, 0.715);
+  transition: 0.3s
+  &:hover
+    background-color: #1F7FF0
+  
+  &-theme
+    &-blue
+      background-color: #2F8FFF
+      color: #fff
+      a 
+        color: #ffffff
+    &-skew
+      position: relative
+      &:after
+        content: ""
+        width: 25%
+        height: 100%
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        background-color: #1F7FF0
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%)
+        transition-timing-function:  cubic-bezier(0.47, 0, 0.745, 0.715);
+        transition: 0.3s
+      &:hover
+        
+        &:after
+          transform: translateY(100%)
+  &:disabled
+    background-color: #c4c4c4
+
+.heading
+  &-wrap
+    display: flex
+    justify-content: space-between
+      
+
+.ts
+  transition-timing-function:  cubic-bezier(0.47, 0, 0.745, 0.715);
+  transition: 0.3s
+
+.content-left
+  ul
+    padding-left: 15px
+    margin-bottom: 40px
+    li
+      font-family: 'Open Sans'
+      font-size: 1.4rem
+      color: #323A3F
+      position: relative
+      margin-bottom: 15px
+      &:before
+        content: ""
+        position: absolute
+        top: 8px
+        left: -15px
+        width: 4px
+        height: 4px
+        border-radius: 50%
+        background-color: #2F8FFF
+
+
+
+
+.page-enter-active, .page-leave-active 
+  transition: opacity 0.25s
+
+.page-enter, .page-leave-active 
+  opacity: 0
+
+
+
+.slide-fade-enter-active, .slide-fade-leave-active 
+  transition: opacity .1s, transform .2s
+
+.slide-fade-enter, .slide-fade-leave-active 
+  opacity: 0
+  transform: translateX(20px)
+
+
+.fade-enter
+
+.fade-enter-active
+  animation: fadeIn 0.5s cubic-bezier(0.47, 0, 0.745, 0.715)
+
+.fade-leave
+
+.fade-leave-active
+  animation: fadeOut 0.5s cubic-bezier(0.47, 0, 0.745, 0.715)
+
+@keyframes fadeIn
+  from
+    transform: translateX(-10px)
+
+  to
+    transform: translateX(0px)
+
+@keyframes fadeOut
+  from
+    transform: translate(0)
+
+  to
+    transform: translateX(-10px)
+    
+
+.print
+  position: relative
+  padding-left: 30px
+  border: 0
+  display: flex
+  align-items: center
+  font-size: 1.4rem
+  cursor: pointer
+  &:before
+    content: ""
+    position: absolute
+    background-image: url('../assets/print.svg')
+    width: 20px
+    height: 20px
+    top: 0px
+    left: 0
+  &:hover
+    color: #1F7FF0
+
+
+
+.form
+  color: #323A3F
+  &-row
+    display: flex
+  &-input-item
+    margin-bottom:  40px  
+    &:nth-child(1)
+      margin-right: 40px
+  &-label
+    font-size: 1.2rem
+    opacity: 0.2
+    margin-bottom: 10px
+    font-weight: bold
+    text-transform: uppercase
+    
+  &-input
+    border: 1px solid #e5e5e5
+    width: 100%
+    height: 60px
+    margin-bottom: 20px
+    position: relative
+    .danger 
+      font-size: 1.2rem
+      line-height: 1em
+      color: red
+      font-family: 'Open Sans' 
+      position: absolute
+      bottom: -15px
+      left: 0
+    &.form-textarea
+      height: 140px
+    input
+      width: 100%
+      height: 100%
+      border: none
+      padding: 20px 20px
+      color: #323A3F
+      font-size: 1.4rem
+      border-radius: 5px
+      &::placeholder
+        color: #323A3F
+    textarea
+      width: 100%
+      border: 0
+      padding: 20px
+      resize: none
+      font-size: 1.4rem
+      color: #323A3F
+      height: 100%
+      &::placeholder
+        color: #323A3F
+      
+    &-file
+      color: #323A3F
+      font-size: 1.6rem
+      input
+        display: none
+      label
+        padding: 16px 20px
+        display: flex
+        align-items: center
+        cursor: pointer
+        span
+          margin-right: 15px
+      &-title
+        padding-bottom: 2px
+        border-bottom: 1px solid #323A3F
+
+          
+        
+  &-submit
+    margin-right: 20px
+    .btn
+      margin-bottom: 0
+      width: 166px
+      letter-spacing: 0.05em
+    &-wrap
+      display: flex
+      align-items: center
+  &-policy
+    display: flex
+    label
+      display: flex
+      align-items: center
+      cursor: pointer
+      -webkit-touch-callout: none
+      -webkit-user-select: none
+      -khtml-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+      width: 30px
+    &-text
+      width: calc(100% - 30px)
+      color: #323A3F
+      font-size: 1.2rem
+      font-family: 'Open Sans'
+      a
+        color: #30A8D9
+        font-family: 'Open Sans'
+        display: inline
+    input
+      display: none
+      &:checked + span
+        background-color: #30A8D9
+        &:after
+          opacity: 1
+    span
+      width: 14px
+      height: 14px
+      border-radius: 50%
+      background-color: #2F8FFF
+      position: relative
+      margin-right: 15px
+      transition: 0.125s
+      transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95)
+      &:after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 14px
+        height: 14px
+        border-radius: 50%
+        background-image: url('../assets/checkbox.svg')
+        background-position: center
+        background-repeat: no-repeat
+        opacity: 0
+        transition: 0.125s
+        transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95)
+
+
+.fade 
+  transition: opacity .15s linear
+    
+.modal
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1050
+  display: none
+  width: 100%
+  height: 100%
+  overflow: hidden
+  outline: 0
+  >*
+    font-family: 'Open Sans'
+  &-open .modal
+    overflow-x: hidden
+    overflow-y: auto
+  &.fade
+  .modal-dialog
+    transition: -webkit-transform .3s ease-out
+    transition: transform .3s ease-out
+    transition: transform .3s ease-out,-webkit-transform .3s ease-out
+    -webkit-transform: translate(0,-50px)
+    transform: translate(0,-50px)
+  &.show
+    background-color: #c9c9c999
+    .modal-dialog
+      transform: none
+  &-content
+    position: relative
+    display: -ms-flexbox
+    display: flex
+    -ms-flex-direction: column
+    flex-direction: column
+    width: 100%
+    pointer-events: auto
+    background-color: #fff
+    background-clip: padding-box
+    border: 1px solid rgba(0,0,0,.2)
+    border-radius: .3rem
+    outline: 0
+    .close
+      span
+        font-size: 2.4rem
+        cursor: pointer
+  &-dialog.modal-border-0 .modal-content
+    border: none
+  &-header
+    display: -ms-flexbox
+    display: flex
+    -ms-flex-align: start
+    align-items: flex-start
+    -ms-flex-pack: justify
+    justify-content: space-between
+    padding: 1rem 1rem
+    border-bottom: 1px solid #dee2e6
+    border-top-left-radius: .3rem
+    border-top-right-radius: .3rem
+    .close
+      padding: 1rem 1rem
+      margin: -1rem -1rem -1rem auto
+  &-title
+    font-size: 1.8rem
+    margin-bottom: 0
+    line-height: 1.5
+    margin-top: 0
+    width: 100%
+    text-align: center
+  &-body
+    font-size: 1.4rem
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1rem;
+    width: 100%
+    text-align: center
+
+@media (min-width: 576px)
+  .modal-dialog 
+    max-width: 500px
+    margin: 1.75rem auto
+
+  
+.close
+  float: right
+  font-size: 1.5rem
+  font-weight: 700
+  line-height: 1
+  color: #000
+  text-shadow: 0 1px 0 #fff
+  opacity: .5
+  span
+    transition: transform .3s ease-out
+  &:hover
+    span
+      color: #2F8FFF

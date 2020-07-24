@@ -1,0 +1,41 @@
+{
+  "name": "vzpp",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "Gimsky <42877856+Gimsky@users.noreply.github.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@innologica/vue-stackable-modal": "^0.1.9",
+    "@nuxtjs/axios": "^5.9.3",
+    "axios": "^0.19.0",
+    "einapage-vue": "^0.3.3",
+    "eslint-plugin-regex": "^1.0.0",
+    "gsap": "^3.2.1",
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.13.0",
+    "nuxt": "^2.0.0",
+    "nuxt-sass-resources-loader": "^2.0.5",
+    "sass-loader": "^8.0.0",
+    "vue-custom-scrollbar": "^1.1.0",
+    "vue-html-to-paper": "^1.3.1",
+    "vue-slick": "^1.1.15",
+    "vue-yandex-maps": "^0.10.6",
+    "vue2-perfect-scrollbar": "^1.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^4.19.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^4.0.0"
+  }
+}

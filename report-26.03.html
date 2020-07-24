@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Отчет</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+
+
+  <script type="text/javascript" defer>
+    var Info = {
+      "name": "Vzpp",
+      "list": [
+        {
+          "name": "Главная",
+          "time": 20,
+          "ready": 8.3,
+          "link": "index.html",
+        },
+        {
+          "name": "Каталог",
+          "time": 3,
+          "ready": 0,
+          "link": "catalog.html",
+        },
+        {
+          "name": "Каталог - Список категорий",
+          "time": 3,
+          "ready": 0,
+          "link": "catalog-group.html",
+        },
+        {
+          "name": "Каталог - Категории",
+          "time": 16,
+          "ready": 0,
+          "link": "catalog-group.html",
+        },
+        {
+          "name": "Каталог - Карточка",
+          "time": 7,
+          "ready": 0,
+          "link": "catalog-cart.html",
+        },       
+        {
+          "name": "Контакты",
+          "time": 6,
+          "ready": 6,
+          "link": "contacts.html",
+        },
+        {
+          "name": "Контакты - Реквизиты",
+          "time": 4,
+          "ready": 2,
+          "link": "catalog-cart.html",
+        },
+        {
+          "name": "Предприятие - О нас",
+          "time": 2,
+          "ready": 2,
+          "link": "catalog-cart.html",
+        },
+        {
+          "name": "Предприятие - История",
+          "time": 3,
+          "ready": 3,
+          "link": "catalog-cart.html",
+        },
+        {
+          "name": "Предприятие - Компетенция",
+          "time": 2,
+          "ready": 2,
+          "link": "catalog-cart.html",
+        },
+        {
+          "name": "Предприятие - Награды",
+          "time": 2,
+          "ready": 1,
+          "link": "catalog-cart.html",
+        },
+        {
+          "name": "Пресс-центр - Новости",
+          "time": 5,
+          "ready": 2,
+          "link": "catalog-cart.html",
+        },
+        {
+          "name": "Пресс-центр - Новости - иннер",
+          "time": 1,
+          "ready": 1,
+          "link": "catalog-cart.html",
+        },
+        {
+          "name": "Пресс-центр - Выставки",
+          "time": 2,
+          "ready": 2,
+          "link": "catalog-cart.html",
+        },
+        {
+          "name": "Пресс-центр - Карьера - Образование",
+          "time": 3,
+          "ready": 1,
+          "link": "catalog-cart.html",
+        },
+        {
+          "name": "Пресс-центр - Карьера - Вакансии",
+          "time": 4,
+          "ready": 4,
+          "link": "catalog-cart.html",
+        },
+        {
+          "name": "Информация - Раскрытие",
+          "time": 1,
+          "ready": 0,
+          "link": "catalog-cart.html",
+        },
+        {
+          "name": "Информация - FAQ",
+          "time": 5,
+          "ready": 0,
+          "link": "catalog-cart.html",
+        },
+        {
+          "name": "Сравнение ",
+          "time": 6,
+          "ready": 0,
+          "link": "catalog-cart.html",
+        },
+        {
+          "name": "JS ",
+          "time": 20,
+          "ready": 2,
+          "link": "catalog-cart.html",
+        },
+        {
+          "name": "Адаптив ",
+          "time": 20,
+          "ready": 0,
+          "link": "catalog-cart.html",
+        },
+        
+
+      ]
+    };
+
+    $(document).ready(function () {
+      let allTime = 0;
+      let curTime = 0;
+      $('body').append(`
+          <div class="heading">${Info.name}<div/>
+          <div class="times">Готово: <span> <span> </div>
+          <div class="times-ost">Осталось: <span> <span> </div>
+        `)
+      Info.list.forEach(function (item, index) {
+        let imgOk;
+
+        allTime += item.time;
+        curTime += item.ready;
+
+        if (item.ready == item.time) {
+          imgOk = "https://image.flaticon.com/icons/svg/752/752683.svg"
+        } else {
+          imgOk = "https://image.flaticon.com/icons/svg/753/753345.svg"
+        }
+        let widthLine = item.ready * 100 / item.time;
+        $('body').append(`
+          <div class="item" > 
+            <div class="item-progress" data-width="${widthLine}%"></div>
+            <div class="item-name item-item">
+              ${item.name}
+            </div>
+            <div class="item-time item-item">
+              ${item.ready}/${item.time}
+            </div>
+            <div class="item-link item-item">
+              <a href="${item.link}"> ${item.name}</a>
+            </div>
+            <div class="item-img item-item">
+              <img src="${imgOk}"/>
+            </div>
+          </div>
+        `)
+        $('.times span').html(`${curTime} / ${allTime} | ${Math.floor(curTime * 100 / allTime)} %`)
+        $('.times-ost span').html(`${Math.floor(allTime/8) - Math.floor(curTime/8) } дней ${ Math.floor(allTime%8 - curTime%8 )} часов`)
+
+
+      })
+
+      $('.item-progress').each(function () {
+        $(this).css({
+          width: $(this).data("width")
+        })
+      })
+
+    })
+  </script>
+
+
+  <style>
+    body {
+      background-color: #4b4b4b;
+      color: #fff;
+      font-family: 'Russo One', sans-serif;
+
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 2px solid #fff;
+    }
+
+    a:hover {
+      border-color: transparent;
+    }
+
+    .heading {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+      padding-top: 20px;
+      letter-spacing: 0.04em;
+
+    }
+
+    .times {
+      margin-bottom: 10px;
+      padding-top: 20px;
+      font-size: 28px;
+    }
+    
+    .times-ost {
+      margin-bottom: 40px;
+      padding-top: 20px;
+      font-size: 32px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-bottom: 15px;
+      background-color: #86f17221;
+
+    }
+
+    .item-item {
+      width: 25%;
+      height: 100%;
+      padding: 15px;
+      font-size: 20px;
+      line-height: 1.5em;
+    }
+
+    .item-img img {
+      width: 40px;
+      height: auto;
+    }
+
+    .item-progress {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(68, 226, 68, 0.568);
+      z-index: -1;
+      transition: 2s;
+      transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      width: 0;
+    }
+  </style>
+
+</head>
+
+<body>
+</body>
+
+</html>
