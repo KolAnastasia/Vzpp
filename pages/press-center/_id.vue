@@ -16,13 +16,18 @@
           >
           </app-press-item>
         </div>
+        <div class="btn-more btn-news"> 
+          <img class="btn-more_img" :src="getImage('more-icon.svg')" alt="" />
+          показать еще
+        </div>
       </div>
        
+    
     </div>
 
-    <app-page-nav
-      :data="pressCenterItems.items"
-    ></app-page-nav>
+     <!--app-page-nav
+     :data="pressCenterItems.items"
+     ></app-page-nav-->
 
    
 
@@ -34,7 +39,7 @@
 import AppSideBar from "@/components/sideBar";
 import AppBreadcrumbs from "@/components/breadcrumbs";
 import AppPressItem from "@/components/pressItem";
-import AppPageNav from "@/components/pageNav";
+// import AppPageNav from "@/components/pageNav";
 
 
 export default {
@@ -42,7 +47,7 @@ export default {
     AppBreadcrumbs,
     AppSideBar,
     AppPressItem,
-    AppPageNav,
+    // AppPageNav,
 
   },
   async asyncData({store, params}) {
