@@ -132,5 +132,4 @@ nav
 .search-btn
   cursor: pointer
 
-
 </style>
