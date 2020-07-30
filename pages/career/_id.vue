@@ -14,11 +14,9 @@
       /> 
       <app-content
         :h2="careerItems.name"
-        :headPhrase="careerItems.headPhrase"
         :content="careerItems.content"
-        :rightImage="careerItems.imagePath"
-        :rightImageDesc="careerItems.imageDescription"
-        :vacancyBenefits="careerItems.vacancyBenefits"
+        :contentRight="careerItems.contentRight"
+        :contentGallery="careerItems.contentGallery "
         :vacancy="careerItems.vacancyItems"
       />
     </div>
@@ -28,7 +26,7 @@
 <script>
 import AppSideBar from "@/components/sideBar";
 import AppBreadcrumbs from "@/components/breadcrumbs";
-import AppContent from "@/components/career-content";
+import AppContent from "@/components/content";
 
 
 export default {
@@ -43,12 +41,6 @@ export default {
     let companyList = _companyList.career
     let careerItems = _careerItems.career
     return {companyList , careerItems}
-  },
-  data() {
-    return{
-      bg:"catalog-bread-bg.jpg",
-      heading:"Карьера"
-    }
   },
    computed: {
     names() {
@@ -71,6 +63,12 @@ export default {
         }
       })
       return obj
+    },
+    bg(){
+      return "catalog-bread-bg.jpg"
+    },
+    heading(){
+      return "Карьера"
     },
     sideLinks() {
       let sideL = []
