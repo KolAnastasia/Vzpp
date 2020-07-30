@@ -86,7 +86,7 @@
     </slick-slide>
 
     <div class="slider-nav">
-      <div class="slider-arrow slider-prev">
+      <!-- <div class="slider-arrow slider-prev">
         <svg width="7" height="9" viewBox="0 0 7 9" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6 8L1 4.5L6 1" stroke="white"/>
         </svg>
@@ -96,7 +96,7 @@
         <svg width="7" height="9" viewBox="0 0 7 9" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 1L6 4.5L1 8" stroke="white"/>
         </svg>
-      </div>
+      </div> -->
 
     </div>
     <div class="slider-dots">
@@ -107,7 +107,6 @@
 </template>
 
 <script >
-// import $ from 'jquery';
 
 export default {
 	data() {
@@ -116,10 +115,10 @@ export default {
 				slidesToShow: 1,
         slidesToScroll: 1,
         dots: true, // показывать `точки`
-        arrows: false, // скрыть стрелки
+        arrows: true, // скрыть стрелки
         fade: true,
-        // nextArrow: $('.slider-next'),
-        // prevArrow: $('.slider-prev'),
+        nextArrow: '<div class="slider-arrow slider-next" ><svg width="7" height="9" viewBox="0 0 7 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 4.5L1 8" stroke="white"/></svg></div>',
+        prevArrow: '<div class="slider-arrow slider-prev" ><svg width="7" height="9" viewBox="0 0 7 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 8L1 4.5L6 1" stroke="white"/></svg></div>',
         customPaging: function(slick, index) {
         }
       },
@@ -143,7 +142,8 @@ export default {
         
       },
 		};
-	},
+  },
+  
 }
 </script>
 
