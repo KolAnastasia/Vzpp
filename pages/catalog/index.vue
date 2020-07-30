@@ -79,8 +79,8 @@ export default {
       align-items: center
       background: #fff
       flex-direction: column
-      border: 1px solid #F0F3F5;
-      box-shadow: 0px 11px 10px rgba(231, 236, 239, 0.66);
+      border: 1px solid #F0F3F5
+      box-shadow: 0px 11px 10px rgba(231, 236, 239, 0.66)
       position: relative
       &:nth-child(4n)
         margin-right: 0
@@ -129,4 +129,6 @@ export default {
       text-align: center
       width: 100%
       padding: 0  40px
+      max-width: 280px
+
 </style>

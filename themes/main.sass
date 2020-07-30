@@ -482,10 +482,10 @@ textarea
     text-align: center
   &-body
     font-size: 1.4rem
-    position: relative;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 1rem;
+    position: relative
+    -ms-flex: 1 1 auto
+    flex: 1 1 auto
+    padding: 1rem
     width: 100%
     text-align: center
 
@@ -528,3 +528,35 @@ textarea
     .btn-more_img
       transform: rotate(180deg)
       transition: .4s
+
+
+@media screen and ( max-width: 1200px)
+  .header 
+    nav
+      display: none
+    .hamburger
+      display: block !important
+
+@media  screen and ( max-width: 981px) 
+  .contacts-container
+    display: block !important
+    .content
+      width: 100% !important
+      padding-left: 0 !important
+      margin-top: 50px
+  .sidebar
+    width: 100% !important
+    ul
+      width: 100%
+      li
+        // max-height: 0
+        // overflow: hidden
+        // line-height: 0
+        a
+          padding-left: 20px !important
+          height: 0
+  .header-logo 
+    a
+      flex-direction: column
+      align-items: flex-start
+   

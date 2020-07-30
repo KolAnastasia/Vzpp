@@ -32,8 +32,8 @@ export default {
 <style lang="sass" scoped>
   .press
     &-item
+      width: 100%
       margin-right: 15px
-      width: calc(33.3% - 15px)
       font-family: 'Open Sans'
       &:hover
         .press-content 
@@ -44,6 +44,7 @@ export default {
         max-width: 100%
         height: auto
         display: block
+        width: 100%
     &-content
       position: relative
       top: -50px

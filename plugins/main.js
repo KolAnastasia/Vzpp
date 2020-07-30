@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from 'vue';
 var moment = require('moment');
 
 // Date format
@@ -89,3 +89,16 @@ Vue.component('vue-accordion-item', {
   }
 })
 
+// $(document).ready(function () {
+//   if ($(window).width() < 981) {
+//     $('.inform_nav').click(function () {
+//       $('.inform_nav').toggleClass('active')
+//    })
+//    $('.inform_nav_item').click(function (event) {
+//       if(!$(event.currentTarget).parent(".inform_nav").hasClass("active")){
+//          event.preventDefault();
+//       }
+//    })
+
+//   }
+// });

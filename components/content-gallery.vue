@@ -23,10 +23,10 @@ export default {
 
 <style lang="sass" scoped>
   .gallery
-    display: flex
-    flex-wrap: wrap
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(222px, 1fr))
     &-item
-      width: calc(25% - 15px)
+      width: 100%
       margin-right: 15px
       margin-bottom: 45px
       &:nth-child(4n)

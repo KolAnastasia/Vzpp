@@ -45,12 +45,12 @@
 
       <div class="slider-item">
         <div class="slider-img">
-          <img :src="getImage('mainslider-1.jpg')" alt="">
+          <img :src="getImage('mainslider-2.jpg')" alt="">
         </div>
         <div class="slider-container">
           <div class="slider-left">
             <div class="slider-title">
-              Воронежский Завод Полупроводниковых Приборов
+             начните свою карьеру на заводе  ВЗПП-С
             </div>
           </div>
           <div class="slider-right">
@@ -58,7 +58,7 @@
 
             </div>
             <div class="slider-content">
-              <blockquote>Ведущий российский разработчик и производитель электронной компонентной базы</blockquote>
+              <blockquote>Официальное оформление по ТК РФ, система мотивации, а так же социальная стабильность</blockquote>
               <div class="btn btn-theme-blue btn-theme-skew">
                 подробнее
               </div>
@@ -107,6 +107,7 @@
 </template>
 
 <script >
+// import $ from 'jquery';
 
 export default {
 	data() {
@@ -116,6 +117,9 @@ export default {
         slidesToScroll: 1,
         dots: true, // показывать `точки`
         arrows: false, // скрыть стрелки
+        fade: true,
+        // nextArrow: $('.slider-next'),
+        // prevArrow: $('.slider-prev'),
         customPaging: function(slick, index) {
         }
       },
@@ -194,14 +198,31 @@ export default {
   &-right
     width: 50%
     height: 100%
+    .btn
+      margin-left: 35px
     blockquote
       color: #fff
   &-nav
     position: absolute
-    top: 200px
-    right: 200px
+    top: 280px
+    right: 38%
     z-index: 3
+    display: flex
+  &-arrow
+    padding: 13px 31px
+    border: 1px solid #ffffff
+    -o-transform: skewX(-40deg)
+    -ms-transform: skewX(-40deg)
+    -moz-transform: skewX(-40deg)
+    -webkit-transform: skewX(-40deg)
+    transform: skewX(-40deg)
+    cursor: pointer
+  &-prev 
+    margin-right: 15px
   &-content
+    margin-top: 135px
+    blockquote:before
+      top: -25px
   &-dots
   &-scroll
     width: 100%

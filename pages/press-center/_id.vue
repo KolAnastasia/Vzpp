@@ -118,7 +118,8 @@ export default {
       width: calc(100% - 280px)
       padding-left: 30px
     &-list
-      display: flex
-      flex-wrap: wrap
+      display: grid
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+      grid-gap: 15px
 </style>
 

@@ -34,48 +34,48 @@
           </button>
         </div>
         <div ref="print">
-          <table>
-            <tr>
-              <td>Полное название</td>
-              <td>Акционерное общество «Воронежский Завод Полупроводниковых Приборов-Сборка»</td>
-            </tr>
-            <tr>
-              <td>Юридический адрес</td>
-              <td>Россия, 394007, г. Воронеж, Ленинский пр-т 119а</td>
-            </tr>
-            <tr>
-              <td>Фактический адрес</td>
-              <td>Россия, 394007, г. Воронеж, Ленинский пр-т 119а</td>
-            </tr>
-            <tr>
-              <td>Расчетный счет</td>
-              <td>40702810125000001849</td>
-            </tr>
-            <tr>
-              <td>Наименование банка</td>
-              <td>Филиал ОАО "Банк ВТБ" в г. Воронеже" г. Воронеж</td>
-            </tr>
-            <tr>
-              <td>Корреспондентский счет</td>
-              <td>30101810100000000835</td>
-            </tr>
-            <tr>
-              <td>БИК</td>
-              <td>042007835</td>
-            </tr>
-            <tr>
-              <td>ИНН</td>
-              <td>042007835</td>
-            </tr>
-            <tr>
-              <td>КПП</td>
-              <td>366101001 </td>
-            </tr>
-            <tr>
-              <td>ОКПО</td>
-              <td>22788135</td>
-            </tr>
-          </table>
+          <div class="table">
+            <div class="table_row">
+              <div class="table_row_name">Полное название</div>
+              <div class="table_row_value">Акционерное общество «Воронежский Завод Полупроводниковых Приборов-Сборка»</div>
+            </div>
+            <div class="table_row">
+              <div class="table_row_name">Юридический адрес</div>
+              <div class="table_row_value">Россия, 394007, г. Воронеж, Ленинский пр-т 119а</div>
+            </div>
+            <div class="table_row">
+              <div class="table_row_name">Фактический адрес</div>
+              <div class="table_row_value">Россия, 394007, г. Воронеж, Ленинский пр-т 119а</div>
+            </div>
+            <div class="table_row">
+              <div class="table_row_name">Расчетный счет</div>
+              <div class="table_row_value">40702810125000001849</div>
+            </div>
+            <div class="table_row">
+              <div class="table_row_name">Наименование банка</div>
+              <div class="table_row_value">Филиал ОАО "Банк ВТБ" в г. Воронеже" г. Воронеж</div>
+            </div>
+            <div class="table_row">
+              <div class="table_row_name">Корреспондентский счет</div>
+              <div class="table_row_value">30101810100000000835</div>
+            </div>
+            <div class="table_row">
+              <div class="table_row_name">БИК</div>
+              <div class="table_row_value">042007835</div>
+            </div>
+            <div class="table_row">
+              <div class="table_row_name">ИНН</div>
+              <div class="table_row_value">042007835</div>
+            </div>
+            <div class="table_row">
+              <div class="table_row_name">КПП</div>
+              <div class="table_row_value">366101001 </div>
+            </div>
+            <div class="table_row">
+              <div class="table_row_name">ОКПО</div>
+              <div class="table_row_value">22788135</div>
+            </div>
+          </div>
         </div>
        
 
@@ -154,6 +154,33 @@ export default {
         width: calc(100% - 280px)
         display: block
         padding-left: 50px
+        .table
+          border-top: 3px solid #475057
+          border-bottom: 3px solid #475057
+          font-family: 'Open Sans', sans-serif
+          font-size: 14px
+          &_row
+            display: flex
+            align-items: center
+            width: 100%
+            border-bottom: 1px solid #EEEEEE
+            &_name
+              padding: 25px
+              width: 100%
+              max-width: 320px
+              font-weight: bold
+              height: 100%
+            &_value
+              width: 100%
+              height: 100%
+              padding: 25px
+            &:nth-of-type(2n-1)
+              background-color: #F8F9FA
+              .table_row_name
+                
+              .table_row_value
+                background-color: #EEF0F1
+                
     &-wrap
       display: flex
       flex-wrap: wrap

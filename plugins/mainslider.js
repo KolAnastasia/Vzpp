@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import $ from 'jquery'
+import $ from 'jquery';
 import Slick from 'vue-slick';
 
 const SlickSlide = {
