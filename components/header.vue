@@ -1,5 +1,7 @@
 <template>
   <header class="header">
+    <app-mobile-menu>
+    </app-mobile-menu>
     <div class="header-logo">
       <nuxt-link to="/">
        <div class="header-logo_text-wrap">
@@ -54,7 +56,12 @@
 </template>
 
 <script>
-export default {};
+import appMobileMenu from "@/components/mobile-menu";
+export default {
+  components: {
+    appMobileMenu
+  }
+};
 </script>
 
 <style lang="sass" scoped>
