@@ -24,7 +24,9 @@ export default {
 <style lang="sass" scoped>
   .gallery
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(222px, 1fr))
+    grid-template-columns: repeat(auto-fit, minmax(222px, 222px))
+    width: 100%
+    grid-gap: 20px
     &-item
       width: 100%
       margin-right: 15px

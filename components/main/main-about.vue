@@ -40,6 +40,9 @@ export default {
       &_img 
         text-align: right
         margin-right: 35px
+        img 
+          width: 100%
+          max-width: 560px
       h2 
         position: relative
         font-size: 40px

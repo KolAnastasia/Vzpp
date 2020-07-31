@@ -120,6 +120,8 @@ export default {
         margin-bottom: 10px
         font-family: "Open Sans"
         font-size: 1.2rem
+        &:hover
+          text-decoration: underline
     &-bot
       background: #0B2D56
       padding: 34px 0
@@ -158,6 +160,16 @@ export default {
           transition-timing-function:  cubic-bezier(0.47, 0, 0.745, 0.715);
         svg
           padding-left: 8px
-      
+
+  @media (max-width: 981px)
+    .footer
+      .footer-top 
+        .container
+          display: grid
+          grid-gap: 25px
+          grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)) 
+          .footer-group
+            margin-right: 25px
+            margin-bottom: 20px
 </style>
 

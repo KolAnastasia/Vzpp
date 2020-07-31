@@ -18,17 +18,26 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  .mainproducts
-    max-width: 1160px
-    margin: 0 auto
-    display: flex
-    margin-bottom: 120px
-    -webkit-box-shadow: 0px 22px 5px -10px rgba(185,186,185,1)
-    -moz-box-shadow: 0px 22px 5px -10px rgba(185,186,185,1)
-    box-shadow: 0px 22px 5px -10px rgba(185,186,185,1)
-    a
-      width: 33.3%
-      margin-right: 0
-      margin-bottom: 0
+
+.mainproducts
+  max-width: 1160px
+  margin: 0 auto
+  display: flex
+  margin-bottom: 120px
+  -webkit-box-shadow: 0px 22px 5px -10px rgba(185,186,185,1)
+  -moz-box-shadow: 0px 22px 5px -10px rgba(185,186,185,1)
+  box-shadow: 0px 22px 5px -10px rgba(185,186,185,1)
+  a
+    width: 33.3%
+    margin-right: 0
+    margin-bottom: 0
+
+@media (max-width: 768px)
+  .mainproducts a
+    width: 50%
+
+@media (max-width: 500px)
+  .mainproducts a
+    width: 100%
 
 </style>

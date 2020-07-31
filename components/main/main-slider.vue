@@ -266,4 +266,25 @@ export default {
         border: 1px solid #000
         padding: 7px 7px 8px 7px
 
+@media (max-width: 1200px)
+  .slider-title 
+    font-size: 35px
+ 
+@media (max-width: 981px)
+  .slider
+    &-container
+      flex-direction: column
+      padding-top: 30px
+      padding-left: 40px
+    &-title
+      font-size: 30px
+    &-left
+      width: 100%
+      height: auto
+    &-right
+      width: 100%
+    &-content
+      margin-top: 65px
+ 
+
 </style>
