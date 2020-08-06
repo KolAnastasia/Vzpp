@@ -53,6 +53,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */    
+   extractCSS: true,
     extend (config, { isDev }) {
       if (isDev && process.client) {
       config.module.rules.push({
