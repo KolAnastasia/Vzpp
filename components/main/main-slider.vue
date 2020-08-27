@@ -1,109 +1,80 @@
 <template>
-  <client-only>
-  <div class="slider-wrap">
-    <slick-slide
-			ref="slick"
-			:options="slickOptions" 
-      class="slider">
-      <div class="slider-item">
-        <div class="slider-img">
-          <img :src="getImage('mainslider-1.jpg')" alt="">
-        </div>
-        <div class="slider-container">
-          <div class="slider-left">
-            <div class="slider-title">
-              Воронежский Завод Полупроводниковых Приборов
-            </div>
-          </div>
-          <div class="slider-right">
-            
-            <div class="slider-content">
-              <blockquote>Ведущий российский разработчик и производитель электронной компонентной базы</blockquote>
-              <div class="btn btn-theme-blue btn-theme-skew">
-              <nuxt-link to="/company/about">
-                подробнее
-                </nuxt-link>
-              </div>
-            </div>
-           
+    <div class="slider-wrap">
+        <slick ref="slick" :options="slickOptions" class="slider">
+            <div class="slider-item">
+                <div class="slider-img">
+                    <img src="/local/templates/vzpp/images/mainslider-1.jpg" alt="">
+                </div>
+                <div class="slider-container">
+                    <div class="slider-left">
+                        <div class="slider-title">
+                            Воронежский Завод Полупроводниковых Приборов
+                        </div>
+                    </div>
+                    <div class="slider-right">
+                        <div class="slider-content">
+                            <blockquote>Ведущий российский разработчик и производитель электронной компонентной базы</blockquote>
+                            <div class="btn btn-theme-blue btn-theme-skew">
+                                <a href="/company/about">
+                                    подробнее
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-          </div>
-        </div>
-
-        <div class="slider-scroll">
-          <div class="slider-scroll_left">
-            <span>
-              <svg width="15" height="35" viewBox="0 0 15 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.5 0.0737305V33.9264M7.5 33.9264L1 26.7746M7.5 33.9264L14 26.7746" stroke="#303030"/>
-              </svg>
-            </span>
-            прокрутите вниз
-          </div>
-        </div>
-
-      </div>
-
-      <div class="slider-item">
-        <div class="slider-img">
-          <img :src="getImage('mainslider-2.jpg')" alt="">
-        </div>
-        <div class="slider-container">
-          <div class="slider-left">
-            <div class="slider-title">
-             начните свою карьеру на заводе  ВЗПП-С
-            </div>
-          </div>
-          <div class="slider-right">
-            <div class="slider-nav">
-
-            </div>
-            <div class="slider-content">
-              <blockquote>Официальное оформление по ТК РФ, система мотивации, а так же социальная стабильность</blockquote>
-              <div class="btn btn-theme-blue btn-theme-skew">
-                подробнее
-              </div>
-            </div>
-            <div class="slider-dots">
+                <div class="slider-scroll">
+                    <div class="slider-scroll_left">
+                        <span>
+                            <svg width="15" height="35" viewBox="0 0 15 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 0.0737305V33.9264M7.5 33.9264L1 26.7746M7.5 33.9264L14 26.7746" stroke="#303030"/>
+                            </svg>
+                        </span>
+                        прокрутите вниз
+                    </div>
+                </div>
 
             </div>
 
-          </div>
-        </div>
+            <div class="slider-item">
+                <div class="slider-img">
+                    <img src="/local/templates/vzpp/images/mainslider-2.jpg" alt="">
+                </div>
+                <div class="slider-container">
+                    <div class="slider-left">
+                        <div class="slider-title">
+                            начните свою карьеру на заводе  ВЗПП-С
+                        </div>
+                    </div>
+                    <div class="slider-right">
+                        <div class="slider-nav"></div>
+                        <div class="slider-content">
+                            <blockquote>Официальное оформление по ТК РФ, система мотивации, а так же социальная стабильность</blockquote>
+                            <div class="btn btn-theme-blue btn-theme-skew">
+                                подробнее
+                            </div>
+                        </div>
+                        <div class="slider-dots"></div>
+                    </div>
+                </div>
 
-        <div class="slider-scroll">
-          <div class="slider-scroll_left">
-            <span>
-              <svg width="15" height="35" viewBox="0 0 15 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.5 0.0737305V33.9264M7.5 33.9264L1 26.7746M7.5 33.9264L14 26.7746" stroke="#303030"/>
-              </svg>
-            </span>
-            прокрутите вниз
-          </div>
-        </div>
+                <div class="slider-scroll">
+                    <div class="slider-scroll_left">
+                        <span>
+                            <svg width="15" height="35" viewBox="0 0 15 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 0.0737305V33.9264M7.5 33.9264L1 26.7746M7.5 33.9264L14 26.7746" stroke="#303030"/>
+                            </svg>
+                        </span>
+                        прокрутите вниз
+                    </div>
+                </div>
+            </div>
 
-      </div>
+        </slick>
 
-    </slick-slide>
-
-    <div class="slider-nav">
-      <!-- <div class="slider-arrow slider-prev">
-        <svg width="7" height="9" viewBox="0 0 7 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 8L1 4.5L6 1" stroke="white"/>
-        </svg>
-      </div>
-
-      <div class="slider-arrow slider-next" >
-        <svg width="7" height="9" viewBox="0 0 7 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 1L6 4.5L1 8" stroke="white"/>
-        </svg>
-      </div> -->
-
+        <div class="slider-nav"></div>
+        <div class="slider-dots"></div>
     </div>
-    <div class="slider-dots">
-
-    </div>
-  </div>
-  </client-only>
 </template>
 
 <script >
