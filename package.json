@@ -20,7 +20,7 @@
     "eslint-plugin-regex": "^1.0.0",
     "gsap": "^3.2.1",
     "jquery": "^3.4.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "node-sass": "^4.13.0",
     "nuxt": "^2.0.0",
     "nuxt-sass-resources-loader": "^2.0.5",
